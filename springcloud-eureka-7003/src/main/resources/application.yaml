@@ -1,0 +1,12 @@
+server:
+  port: 7003
+
+eureka:
+  instance:
+    hostname: localhost
+    lease-expiration-duration-in-seconds: 10 #用来修改eureka默认接受心跳的最大时间 默认是90s
+  client:
+    register-with-eureka: false # 表示是否向eureka注册中心注册自己
+    fetch-registry: false #表示自己是注册中心（关闭启动时的立即--注册）
+    service-url: #监控页面
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

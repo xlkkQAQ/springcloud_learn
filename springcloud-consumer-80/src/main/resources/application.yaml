@@ -1,0 +1,14 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: SPRINGCLOUD-CONSUMEN-80
+
+#eureka的配置,服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: springcloud-consumer-80  #修改eureka上的默认描述
